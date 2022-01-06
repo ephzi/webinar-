@@ -1,0 +1,21 @@
+h1{
+color:red; font-weight:bold;
+}
+
+body{
+background-color:#D77FA1;
+}
+
+form{
+border:1px solid black;
+margin-left:300px;
+margin-right:300px;
+margin-top:100px;
+background-color:yellow;
+height:100px;
+}
+
+button{
+background-color: pink;
+margin-top:10px;
+}

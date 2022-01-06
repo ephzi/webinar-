@@ -1,0 +1,59 @@
+<!doctype html>
+<html >
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+  </head>
+<link rel="stylesheet" href="style1.css"/>
+<script src="ang.js"></script>
+  <body >
+     
+    <div ng-app="ngclickApp" ng-controller="ngclickCtrl">
+     <form name="reg" method="post" action="form.php">
+         <span ng-show="visible">
+      <h1><center><b>Webinar on AI</b></center></h1><br>
+      <h4><center>CONDUCTED BY IBM</center></h5>
+      <h4><center>AN EXCLUSIVE WEBINAR FOR STUDENTS</center></h4>
+      <h4><center>SPEAKER: Dr. SHANTHA DEVI ('MANAGING DIRECTOR INTENT SOLUTIONS')</center></h4>
+      <h5>Email:arthi@ibm.org</h5>
+      <h5>contact: 044-7675-7652</h5>
+<hr>
+       <img src="img.jpg"/><br><br>
+<hr>
+      <label>Name:</label>
+      <input type="text" ng-model="yourName" name="name" ><br>
+      <label>REG. No:</label>
+      <input type="text" ng-model="regno" name="reg" ><br>
+      <label>DEPARTMENT:</label><br>
+      <input type="radio" ng-model="r" value="CST" name="r">CST<br>
+      <input type="radio" ng-model="r" value="IT" name="r">IT<br>
+      <input type="radio" ng-model="r" value="BCA" name="r">BCA<br>
+      <label>EMAIL ID:</label>
+      <input type="email"  name="mail" ng-model="mail" ng-valid="reg.mail.$valid" name="mail"><br>
+      <label>Phone Number:</label>
+      <input type="phone" name="num" ng-model="num"><br>
+      <button  ng-click="submit()" name="submit">SUBMIT</button>
+      
+      </span>
+      <div  ng-model="newer" ng-show="Invisible">
+      <hr>
+      <h1><center>WEBINAR ON AI</center></h1>
+      <img src="img.jpg"/><br><br>
+      <table>
+          <tr>
+      <td><p>{{yourName}}</p></td>
+      <td><p>{{regno}}</p></td>
+      <td><p>{{r}}</p></td>
+      <td><p>{{mail}}</p></td>
+      <td><p>{{num}}</p></td>
+      </tr>
+      </table>
+      <h3>{{submit}}</h3>
+       <button name="ok">OK</button>
+       <div ng-show="visbility">
+          
+      </div>
+      </div>
+      </form>
+      </div>
+       
+  </body>
